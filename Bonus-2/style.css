@@ -74,7 +74,18 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #FDFCEC;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Stile del box in questione */
+
+.bar-top{
+    width: 100%;
+    position: absolute;
+    background-color: #E8E4B1;
+    top: 0;
+    padding: 80px;
 }
 
 .box-page-sc{
@@ -105,12 +116,14 @@ body{
     font-size: 1.7em;
     font-weight: 900;
     text-transform: capitalize;
+    color: #40352C;
 }
 
 .title-sc p{
-    font-size: 1.0em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 500;
     text-transform: capitalize;
+    color: #40352C;
 }
 
 .lamp-box{
@@ -136,8 +149,14 @@ body{
     padding: 20px;
     font-size: 1em;
     font-weight: 600;
+    color: #FDFCEC;
     width: 180px;
     border-radius: 30px;
     cursor: pointer;
+    background-color: #8A8C3F;
     text-transform: capitalize;
+}
+
+.btn-int:active{
+    background-color: #494a20;
 }

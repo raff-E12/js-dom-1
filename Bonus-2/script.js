@@ -1,8 +1,4 @@
-// Consegna dell'esercizio:
-// Inseriamo in pagina l’immagine della lampadina spenta 
-// che trovate in allegato e accanto un bottone con la scritta “Accendi”.
-// Al click del bottone, la lampadina dovrà accendersi 
-// (dovremo quindi utilizzare l’immagine della lampadina accesa, sempre in allegato)
+//Bonus-3: Integrazione Css di Base.
 
 //Selezioni dei relativi selettori
 let lamp_img = document.getElementById('lamp-sel');
