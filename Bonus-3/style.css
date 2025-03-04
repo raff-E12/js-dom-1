@@ -1,0 +1,227 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+img{
+    width: 100%;
+}
+
+body {
+    font-size: sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  width: 10%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea:focus{
+    outline: none;
+}
+
+title{
+    display: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FDFCEC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Color Palette */
+
+:root{
+    --black-bg: #0b0a0a;
+    --white-bg: #F2F0E4;
+    --white-btn: #E9ECF2;
+    --blue-btn: #057AF2;
+    --blue-btn-1: #094A73;
+    --blue-btn-switch: #69B7BF;
+    --yellow-btn: #F2CA50;
+    --default-color: #D7D7D9;
+    --default-color-2: #0D0D0D;
+    --btn-color: #D9A036;
+    --btn-color-2: #D95525;
+
+}
+
+/* Applicazione Stile del Progetto */
+
+.body-sc{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.body-bg{
+    background-color: var(--default-color);
+    padding: 30px;
+    width: 100%;
+    height: 100vh;
+}
+
+.body-bg.light{
+    background-color: var(--white-bg);
+    width: 100%;
+}
+
+.body-bg.dark{
+    background-color: var(--black-bg);
+    padding: 10px;
+    width: 100%;
+}
+
+.body-bg.light.missing, .body-bg.dark.missing{
+    width: 0;
+    padding: 0;
+    transition: all ease-in-out .2s;
+}
+
+.box-switch{
+    position: absolute;
+    display: flex;
+    width: 450px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.switch-sc{
+    width: 410px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.btn-box{
+    border: 2.8px solid var(--black-bg);
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7px;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: var(--yellow-btn);
+}
+
+.btn-box.dark{
+    border: 2.8px solid var(--default-color);
+    background-color: var(--blue-btn);
+    transition: all ease-in-out .10s;
+}
+
+.switch-sc .text-switch.dark{
+    color: var(--default-color);
+    transition: all ease-in-out .10s;
+}
+
+.switch-sc h4{
+    font-size: 1.3em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    color: var(--default-color-2);
+    font-style: normal;
+}
+
+#btn-switch{
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 100px;
+    color: var(--white-btn);
+    cursor: pointer;
+    background-color: var(--btn-color);
+    overflow: hidden;
+    border: 3px solid var(--btn-color-2);
+}
+
+.switch-sc #btn-switch.light{
+    transform: translateX(0);
+    transition: all ease-in .10s;
+    background-color: var(--btn-color);
+    border: 4px solid var(--btn-color-2);
+}
+
+.switch-sc #btn-switch.light .icon-box{
+    transform: translateY(0);
+}
+
+.switch-sc #btn-switch.dark .icon-box{
+    transform: translateY(-39px);
+}
+
+.switch-sc #btn-switch.dark{
+    transform: translateX(150px);
+    transition: all ease-in .10s;
+    background-color: var(--blue-btn-switch);
+    border: 4px solid var(--blue-btn-1);
+}
+
+.icon-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    transition: all ease-in .50s;
+}
