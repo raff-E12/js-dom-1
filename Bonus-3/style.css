@@ -166,11 +166,45 @@ body{
     border: 2.8px solid var(--default-color);
     background-color: var(--blue-btn);
     transition: all ease-in-out .10s;
+    animation-name:  dark-movement-groove;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+}
+
+.btn-box.light{
+    border: 2.8px solid var(--black-bg);
+    background-color: var(--yellow-btn);
+    transition: all ease-in-out .10s;
+    animation-name:  light-movement-groove;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
 }
 
 .switch-sc .text-switch.dark{
     color: var(--default-color);
     transition: all ease-in-out .10s;
+}
+
+@keyframes dark-movement-groove {
+    0%{
+        transform: rotate(10deg);
+        box-shadow: -10px -10px 0px 2px var(--blue-btn), -20px -20px 0px 2px var(--blue-btn-1);
+    }
+    100%{
+        transform: rotate(0deg);
+        box-shadow: 0px 0px 0px 0px var(--blue-btn), 0px 0px 0px 0px var(--blue-btn-1);
+    }
+}
+
+@keyframes light-movement-groove {
+    0%{
+        transform: rotate(-10deg);
+        box-shadow: 10px -10px 0px 2px var(--btn-color), 20px -20px 0px 2px var(--btn-color-2);
+    }
+    100%{
+        transform: rotate(0deg);
+        box-shadow: 0px 0px 0px 0px var(--btn-color), 0px 0px 0px 0px var(--btn-color-2);
+    }
 }
 
 .switch-sc h4{
